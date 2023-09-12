@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Count number of Rows in a Table using JQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<table id='table'>
+ <thead>
+  <tr>
+   <th>Instructor</th>
+   <th>Number</th>
+   <th>Class</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Sara</td>
+   <td>1221</td>
+   <td>HTML</td>
+  </tr>
+  <tr>
+   <td>Rose</td>
+   <td>0808</td>
+   <td>CSS</td>
+  </tr>
+ </tbody>
+</table>
+<button id = "row">Count number of Rows</button>  
+</body>
+<script>
+    $(document).ready(function(){
+      $("#row").click(function(){
+      var count = $("#table tr").length;
+      alert(count);
+      });
+    });
+    </script>
+
+</html>

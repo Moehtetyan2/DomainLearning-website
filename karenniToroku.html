@@ -1,0 +1,294 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+
+<head>
+    <title>top</title>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background: #DFDFDE;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+
+        nav li {
+            margin: 0 10px;
+
+        }
+
+        li a {
+
+            margin-right: 50px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        li a:hover {
+            opacity: 0.7;
+            z-index: 3;
+
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        .container {
+            width: 100%;
+
+        }
+
+        .container img {
+            width: 100%;
+            position: absolute;
+            margin: 0;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+
+            display: flex;
+            padding: 20px;
+
+        }
+
+        .box1 {
+            width: 45%;
+
+
+            padding: 15px;
+
+            position: relative;
+
+        }
+
+        .box2 {
+            width: 45%;
+            margin-left: 20px;
+
+            padding: 15px;
+
+            position: relative;
+
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 70%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: medium;
+            box-shadow: 2px 4px 19px -8px rgba(0, 0, 0, 0.62);
+            -webkit-box-shadow: 2px 4px 19px -8px rgba(0, 0, 0, 0.62);
+            -moz-box-shadow: 2px 4px 19px -8px rgba(0, 0, 0, 0.62);
+
+        }
+
+        select {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        input[type="submit"]:hover {
+
+            background-color: #45a049;
+
+        }
+
+
+        /* footer */
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--<div class="container"><img src="img/hotel.jpg"></div>-->
+
+
+    <form>
+        <!--
+            <div class="iconBox">
+            <h3>個人情報を入力</h3>
+            <div class="icon"><img src="img/icon.jpg"></div>
+            -->
+
+        </div>
+        <div class="box1">
+
+
+            <label>Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+
+
+<!--Age Input Start-->
+            <label>Date of Birth</label>
+            <input type="date" id="birthday" name="birthday" required>
+<!--Age Input End-->
+
+<!--Gender checkbox Start-->
+            <label>Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <!-- add more options for other Gender -->
+            </select>
+<!--Gender checkbox End-->
+            <br>
+<!--MARITAL STATUS checkbox Start-->
+            <label>Marital Status</label>
+            <select id="marital" name="marital" required>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="other">Other</option>
+            </select>
+<!--MARITAL STATUS checkbox End-->
+
+<!--Visa checkbox Start-->
+<label>Visa</label>
+<select id="visa" name="visa" required>
+    <option value="work">Work</option>
+    <option value="student">Student</option>
+    <option value="tokutei katsudo">Tokutei Katsudo</option>
+    <option value="tokutei gino">Tokutei Gino</option>
+    <option value="other">Other</option>
+
+</select>
+<!--Visa checkbox End-->
+
+        </div>
+
+        <div class="box2">
+
+<!--Job checkbox Start-->
+<label>Job</label>
+<select id="job" name="job" required>
+    <option value="it">IT</option>
+    <option value="student">Student</option>
+    <option value="kaigo">Kaigo</option>
+    <option value="kojo">Kojo</option>
+    <option value="other">Other</option>
+
+</select>
+<!--Job checkbox End-->
+
+
+<!--Address in Japan checkbox Start-->
+<label>Address in Japan</label>
+<select id="addressJp" name="addressJp" required>
+    <option value="kanto">Kanto</option>
+    <option value="hokkaido">Hokkaido</option>
+    <option value="kaigo">Kaigo</option>
+    <option value="kojo">Kojo</option>
+    <option value="other">Other</option>
+
+</select>
+<!--Address in Japan checkbox End-->
+
+<!--Address in Myanmar checkbox Start-->
+<label>Address in Japan</label>
+<select id="addressMya" name="addressMya" required>
+    <option value="loikaw">Loikaw</option>
+    <option value="demoso">Demoso</option>
+    <option value="moebye">Moebye</option>
+    <option value="pekon">Pekon</option>
+    <option value="phruso">Phruso</option>
+    <option value="borlake">Borlake</option>
+    <option value="mease">Mease</option>
+    <option value="other">Other</option>
+
+</select>
+<!--Address in Myanmar checkbox End-->
+
+<!--Ethnic checkbox Start-->
+<label>Ethnic</label>
+<select id="ethnic" name="ethnic" required>
+    <option value="kayah">Kayah</option>
+    <option value="kayaw">Kayaw</option>
+    <option value="kayan">Kayan</option>
+    <option value="kayba">Kayba</option>
+    <option value="kayko">Kayko</option>
+    <option value="other">Other</option>
+
+</select>
+<!--Ethnic checkbox End-->
+
+<!--Age Input Start-->
+<label>Date of Entry (Japan) </label>
+<input type="month" id="entry" name="entry" required>
+<!--Age Input End-->
+
+
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <footer>
+        <p>&copy; 2023 Karenni. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

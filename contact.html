@@ -1,0 +1,264 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+
+<head>
+    <title>top</title>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background: #DFDFDE;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+
+        nav li {
+            margin: 0 10px;
+
+        }
+
+        li a {
+
+            margin-right: 50px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        li a:hover {
+            opacity: 0.7;
+            z-index: 3;
+
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        .container {
+            width: 100%;
+
+        }
+
+        .container img {
+            width: 100%;
+            position: absolute;
+            margin: 0;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+
+            display: flex;
+            padding: 20px;
+
+        }
+
+        .box1 {
+            width: 45%;
+
+
+            padding: 15px;
+
+            position: relative;
+
+        }
+
+        .box2 {
+            width: 45%;
+            margin-left: 20px;
+
+            padding: 15px;
+
+            position: relative;
+
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: medium;
+            box-shadow: 2px 4px 19px -8px rgba(0, 0, 0, 0.62);
+            -webkit-box-shadow: 2px 4px 19px -8px rgba(0, 0, 0, 0.62);
+            -moz-box-shadow: 2px 4px 19px -8px rgba(0, 0, 0, 0.62);
+
+        }
+
+        select {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        input[type="submit"]:hover {
+
+            background-color: #45a049;
+
+        }
+
+
+        .credit {
+            width: 100%;
+            margin: auto;
+            margin-bottom: 10px;
+
+        }
+
+        .icon {
+            width: 20%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .icon img {
+            width: 100%;
+
+        }
+
+
+        /* footer */
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container"><img src="img/hotel.jpg"></div>
+
+
+    <form>
+        <div class="box1">
+            <h3>個人情報を入力</h3>
+            <div class="icon"><img src="img/icon.jpg"></div>
+
+
+
+            <input type="text" id="name" name="name" placeholder="Name" required>
+
+
+
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+
+            <select id="country-code" name="country-code" required>
+                <option value="+81">Japan (+81)</option>
+                <option value="+1">America (+1)</option>
+                <option value="+86">China (+86)</option>
+                <option value="+82">Korea (+82)</option>
+                <!-- add more options for other countries -->
+            </select>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+            <br>
+
+        </div>
+
+        <div class="box2">
+            <h3>支払い方法</h3>
+
+            <div class="credit">
+                <!-- Visa -->
+                <img src="https://www.credit-card-logos.com/images/visa_credit-card-logos/visa_logo_1.gif" alt="Visa"
+                    width="50" height="30">
+
+                <!-- Mastercard -->
+                <img src="https://www.credit-card-logos.com/images/mastercard_credit-card-logos/mastercard_logo_1.gif"
+                    alt="Mastercard" width="50" height="30">
+
+                <!-- American Express -->
+                <img src="https://www.credit-card-logos.com/images/american_express_credit-card-logos/american_express_logo_1.gif"
+                    alt="American Express" width="50" height="30">
+
+                <!-- Discover -->
+                <img src="https://www.credit-card-logos.com/images/discover_credit-card-logos/discover_logo_1.gif"
+                    alt="Discover" width="50" height="30">
+
+
+
+            </div>
+
+            <input type="text" id="card-number" name="card-number" pattern="[0-9]{13,16}" placeholder="Card number"
+                required>
+
+
+            <input type="text" id="card-holder-name" name="card-holder-name" placeholder="Cardholder name" required>
+
+
+            <input type="month" id="expiry-date" name="expiry-date" placeholder="Expiration date" required>
+
+
+            <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" placeholder="CVV" required>
+
+
+            <textarea id="billing-address" name="billing-address" placeholder="Billing address"></textarea>
+
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <footer>
+        <p>&copy; 2023 My Hotel. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

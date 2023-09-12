@@ -1,0 +1,163 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+
+<head>
+    <title>top</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" type="module"></script>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <form>
+            <label for="check-in">Check-in:</label>
+            <input type="date" id="check-in" name="check-in">
+            <label for="check-out">Check-out:</label>
+            <input type="date" id="check-out" name="check-out">
+            <label for="room">Room:</label>
+            <select id="room" name="room">
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="deluxe">Deluxe</option>
+            </select>
+            <label for="person">Person:</label>
+            <select id="person" name="person">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="container"><img src="img/hotel.jpg"></div>
+
+    <!--type 1 class -->
+    <div class="product-container" id="rm_regular">
+        <div class="product-image">
+            <img src="img/08.jpg" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h2>Product Name</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel odio sit amet eros bibendum imperdiet.
+            </p>
+            <p class="product-price">$19.99</p>
+        </div>
+    </div>
+
+
+    <!--type 2 class -->
+    <div class="rm_delux">
+        <div class="product-image">
+            <img src="img/04.jpg" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h2>Product Name</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel odio sit amet eros bibendum imperdiet.
+            </p>
+            <p class="product-price">$19.99</p>
+        </div>
+    </div>
+
+    <!--type 3 class -->
+    <div class="rm_group">
+        <div class="product-image">
+            <img src="img/010.jpg" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h2>Product Name</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel odio sit amet eros bibendum imperdiet.
+            </p>
+            <p class="product-price">$19.99</p>
+        </div>
+    </div>
+
+    <!--type 4 class -->
+    <div class="rm_two">
+        <div class="product-image">
+            <img src="img/07.jpg" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h2>Product Name</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel odio sit amet eros bibendum imperdiet.
+            </p>
+            <p class="product-price">$19.99</p>
+        </div>
+    </div>
+
+
+    <!--footer class -->
+    <footer>
+        <p>&copy; 2023 My Hotel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('.product-container').on('click', function () {
+                window.location.href = "detail.html";
+            });
+
+
+
+            $('form').on('submit', function (e) {
+                e.preventDefault(); // prevent the form from submitting
+
+                // get the values of the form inputs
+                var checkIn = $('#checkin').val();
+                var checkOut = $('#checkout').val();
+                var roomType = $('#room').val();
+                var numPersons = $('#person').val();
+
+                // check if the user searched for a single person and a single room
+                if (numPersons >= 1 && roomType == "single") {
+                    $('.product-container').show();
+                    $(".rm_delux").show();
+                    $(".rm_two").hide();
+                    $(".rm_group").hide();
+
+                }
+                else if (roomType == "double") {
+                    $(".rm_two").show();
+                    $(".rm_group").hide();
+                    $('.product-container').hide();
+                    $(".rm_delux").hide();
+
+
+                }
+                else if (numPersons > 2 && roomType == "double") {
+                    $(".rm_group").show();
+                    $('.product-container').hide();
+                    $(".rm_delux").hide();
+                    $(".rm_two").hide();
+
+                }
+                else if (numPersons > 1 && roomType == "deluxe") {
+                    $(".rm_delux").show();
+                    $('.product-container').hide();
+                    $(".rm_group").hide();
+                    $(".rm_two").hide();
+
+                }
+
+                else {
+                    $('.product-container').hide(); // hide the class with classA
+                    $(".rm_group").hide();
+                    $(".rm_two").hide();
+                }
+            });
+
+
+
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

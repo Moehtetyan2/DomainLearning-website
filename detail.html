@@ -1,0 +1,168 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+
+<head>
+    <title>top</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background: #DFDFDE;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+
+        nav li {
+            margin: 0 10px;
+
+        }
+
+        li a {
+
+            margin-right: 50px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        li a:hover {
+            opacity: 0.7;
+            z-index: 3;
+
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+
+
+        }
+
+        .container {
+            width: 100%;
+            margin-bottom: 50px;
+
+
+        }
+
+        .container img {
+            width: 100%;
+            position: absolute;
+
+        }
+
+        .box {
+            width: 20%;
+
+
+
+            background: #fff;
+            position: relative;
+            margin: auto;
+        }
+
+        .box img {
+            width: 100%;
+
+
+
+        }
+
+        .box .txt {
+            width: 100%;
+
+        }
+
+        button {
+            width: 100%;
+            height: 40px;
+            background: orangered;
+            border: none;
+
+        }
+
+        button a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        p {
+            font-size: 15px;
+            padding: 5px;
+        }
+
+        h3 {
+            width: 50%;
+
+            border: 1px solid gray;
+            text-align: center;
+            margin: auto;
+
+        }
+
+        /* footer */
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container"><img src="img/hotel.jpg"></div>
+    <div class="box">
+        <img src="img/08.jpg">
+        <div class="txt">
+            <h3 id="rm_A">RoomA</h3>
+            <p>エコノミー ツイン シングルユース 喫煙可
+                <br>
+                10/10 非常に素晴らしい
+                <br><br>
+
+                定員 1 名
+                <br>
+                シングルベッド 1 台 <br> Wifi （無料）<br>朝食（無料）
+            </p>
+            <button><a href="contact.html">予約</a></button>
+        </div>
+    </div>
+    <!--footer class -->
+    <footer>
+        <p>&copy; 2023 My Hotel. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>

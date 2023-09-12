@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Confirmation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #C5DFF8;
+        }
+        
+        .container {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            background-color: #DDE6ED;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+        
+        table {
+            border: 1px solid black;
+            border-collapse: separate;
+            border-spacing: 0px;
+            min-width: max-content;
+        }
+        
+        th {
+            position: sticky;
+            top: 0px;
+            background-color: teal;
+            color: wheat;
+        }
+        
+        .table-wrapper {
+            margin-bottom: 0px;
+            max-height: 300px;
+            overflow-y: scroll;
+            margin: 20px;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        
+        .outer-wrapper {
+            border: 1px solid black;
+            box-shadow: 0px 0px 3px black;
+            margin: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <select class="search-select" data-column="0">
+            <option value="all">All</option>
+            <option value="普通預金口座">普通預金口座</option>
+            <option value="定期預金口座">定期預金口座</option>
+            <option value="デビットカード口座">デビットカード口座</option>
+            <option value="クレジットカード口座">クレジットカード口座</option>
+        </select>
+        <button id="searchButton">Search</button>
+    
+        <div id="searchResults"></div>
+    </div>
+    
+    <div class="table-wrapper">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">通帳種類</th>
+                    <th scope="col">名前</th>
+                    <th scope="col">生年月日</th>
+                    <th scope="col">携帯</th>
+                    <th scope="col">メール</th>
+                    <th scope="col">仕事</th>
+                    <th scope="col">住所</th>
+                    <th scope="col">削除</th>
+                    <th scope="col">更新</th>
+                    <th scope="col">住所</th>
+                    <th scope="col">削除</th>
+                    <th scope="col">更新</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td>普通預金口座</td>
+                    <td>Name 1</td>
+                    <td>1990-01-01</td>
+                    <td>123456789</td>
+                    <td>email1@example.com</td>
+                    <td>Job 1</td>
+                    <td>Address 1</td>
+                    <td>削除</td>
+                    <td>更新</td>
+                    <td>Address 1</td>
+                    <td>削除</td>
+                    <td>更新</td>
+                </tr>
+                <tr>
+                    <td>定期預金口座</td>
+                    <td>Name 2</td>
+                    <td>1995-02-02</td>
+                    <td>987654321</td>
+                    <td>email2@example.com</td>
+                    <td>Job 2</td>
+                    <td>Address 2</td>
+                    <td>削除</td>
+                    <td>更新</td>
+                    <td>Address 2</td>
+                    <td>削除</td>
+                    <td>更新</td>
+                </tr>
+                <tr>
+                    <td>デビットカード口座</td>
+                    <td>Name 3</td>
+                    <td>1985-03-03</td>
+                    <td>567891234</td>
+                    <td>email3@example.com</td>
+                    <td>Job 3</td>
+                    <td>Address 3</td>
+                    <td>削除</td>
+                    <td>更新</td>
+                    <td>Address 3</td>
+                    <td>削除</td>
+                    <td>更新</td>
+                </tr>
+                <tr>
+                    <td>クレジットカード口座</td>
+                    <td>Name 4</td>
+                    <td>1980-04-04</td>
+                    <td>432198765</td>
+                    <td>email4@example.com</td>
+                    <td>Job 4</td>
+                    <td>Address 4</td>
+                    <td>削除</td>
+                    <td>更新</td>
+                    <td>Address 4</td>
+                    <td>削除</td>
+                    <td>更新</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#searchButton").on("click", function() {
+                var selectedOption = $(".search-select").val();
+                var columnIndex = $(".search-select").data("column");
+                
+                $("#tableBody tr").hide();
+                $("#tableBody td:nth-child(" + (columnIndex + 1) + "):contains('" + selectedOption + "')")
+                    .parent("tr")
+                    .show();
+            });
+        });
+    </script>
+</body>
+</html>

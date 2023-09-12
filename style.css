@@ -1,0 +1,159 @@
+body {
+  background: #DFDFDE;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-bar label,
+.menu-bar select,
+.menu-bar input {
+  margin: 10px;
+}
+
+.menu-bar select {
+  width: 100px;
+}
+
+.menu-bar button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.menu-bar button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+label {
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+
+.container img {
+  width: 100%;
+  position: absolute;
+  margin: 0;
+}
+
+/* product container class Start */
+.product-container {
+  display: none;
+  width: 70%;
+  height: 150px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.rm_group {
+  display: none;
+  width: 70%;
+  height: 150px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+
+  padding: 20px;
+  position: relative;
+}
+
+.rm_delux {
+  display: none;
+  width: 70%;
+  height: 150px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.rm_two {
+  display: none;
+  width: 70%;
+  height: 150px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.product-image {
+
+  margin-right: 20px;
+  float: left;
+}
+
+.product-image img {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.product-info h2 {
+  margin: 0;
+}
+
+.product-info p {
+  margin: 10px 0;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* footer */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

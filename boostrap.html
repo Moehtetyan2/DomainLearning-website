@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Confirmation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+    .wrapper{
+        width: 20%;
+        height: 220px;
+        float: left;
+        border: 1px solid gray;
+    }
+        .search-select {
+            width: 200px;
+            background-color: #62CDFF;
+            border-radius: 3px;
+            padding: 3px;
+            margin: 20px;
+            border: 1px solid #62CDFF;
+            cursor: pointer;
+            box-shadow: 4px 10px 5px -10px rgba(81, 84, 93, 0.75);
+            -webkit-box-shadow: 4px 10px 5px -10px rgba(81, 84, 93, 0.75);
+            -moz-box-shadow: 4px 10px 5px -10px rgba(81, 84, 93, 0.75);
+
+        }     
+
+        #searchButton {
+            background-color: #62CDFF;
+            border-radius: 4px;
+            padding: 5px;
+            border: 1px solid #62CDFF;
+            font-size: small;
+            margin-left: -5px;
+            box-shadow: 4px 10px 5px -10px rgba(81, 84, 93, 0.75);
+            -webkit-box-shadow: 4px 10px 5px -10px rgba(81, 84, 93, 0.75);
+            -moz-box-shadow: 4px 10px 5px -10px rgba(81, 84, 93, 0.75);
+        }
+        option{
+            cursor: pointer;
+            background-color: #fff;
+            
+        }
+        option:first-child{
+            background-color: #E4F1FE;
+        }
+        option:nth-child(2){
+            background-color: #8DC6FF;
+        }
+        option:nth-child(3){
+            background-color: #E4F1FE;
+        }
+        option:nth-child(4){
+            background-color: #8DC6FF;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Bank start-->
+    <div class="wrapper">
+    <select class="search-select" data-column="0">
+        <option value="普通預金口座">普通預金口座</option>
+        <option value="定期預金口座">定期預金口座</option>
+        <option value="デビットカード口座">デビットカード口座</option>
+        <option value="クレジットカード口座">クレジットカード口座</option>
+    </select>
+
+    <button id="searchButton"><span><img src="img/search.png" width="15px" alt="" /></span></button>
+
+    <div id="searchResults"></div>
+
+    <!--Bank end-->
+
+    <!--Name start-->
+   
+    <select class="search-select" data-column="0">
+        <option value="MOE HTET YAN">MOE HTET YAN</option>
+        <option value="si si lwin Alias">si si lwin Alias</option>
+        <option value="カサルさん">カサルさん</option>
+        <option value="PO LI THEIN">PO LI THEIN</option>
+    </select>
+
+    <button id="searchButton"><span><img src="img/search.png" width="15px" alt="" /></span></button>
+
+    <div id="searchResults"></div>
+
+
+    <!--Name end-->
+
+    <!--Name start-->
+
+   
+    <select class="search-select" data-column="0">
+        <option value="小売業">小売業</option>
+        <option value="IT/ソフトウェア開発">IT/ソフトウェア開発</option>
+        <option value="医者/看護">医者/看護</option>
+        <option value="学生">学生</option>
+    </select>
+
+    <button id="searchButton"><span><img src="img/search.png" width="15px" alt="" /></span></button>
+
+    <div id="searchResults"></div>
+
+    </div>
+
+    <!--Name end-->
+
+
+
+
+</body>
+
+</html>
